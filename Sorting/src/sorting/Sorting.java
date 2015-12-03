@@ -15,11 +15,11 @@ import javax.sound.sampled.*;
 public class Sorting extends JFrame {
 
 	// Screen size
-	private static final int SCREEN_WIDTH = 1600;
-	private static final int SCREEN_HEIGHT = 900;
+	private static final int SCREEN_WIDTH = 800;
+	private static final int SCREEN_HEIGHT = 600;
 
 	// The size of the data sample
-	private static final int DATA_SIZE = 900;
+	private static final int DATA_SIZE = 128;
 
 	private int[] data;				// The data to be sorted. The algorithm will change this array
 	private int[] origData;			// The original data for copying purposes
@@ -289,7 +289,7 @@ public class Sorting extends JFrame {
 
 		// Draw the text containing the algorithm name and some stats
                 // Buble is not counting correctly
-		g.setColor(Color.GREEN);
+		g.setColor(Color.RED);
                 g.setFont(new Font("default", Font.BOLD, 14));
 		g.drawString(algorithms.get(currResult).getName(), 10, 50);
 		g.drawString("Access #: " + accessCnt, 200, 50);

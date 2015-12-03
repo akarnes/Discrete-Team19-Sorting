@@ -82,6 +82,8 @@ public class DataAccessor {
         actions.add(new Action(ActionType.GET, i, 0, 0));
         actions.add(new Action(ActionType.SET, i, 0, data[i]));
         actions.add(new Action(ActionType.SET, j, 0, data[j]));
+        accessTotal++;
+        setTotal += 2;
     }
 
     /**

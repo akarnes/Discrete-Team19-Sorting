@@ -7,7 +7,7 @@ public class ShotGunSort implements SortingAlgorithm{
 	boolean sorted = false;
 		
 	public String getName() {
-		return "Shot Gun Sort (aka: Useless Sort)";
+		return "Shotgun Sort (Bogo Sort)";
 	}
 
 	public void run(DataAccessor data) {
