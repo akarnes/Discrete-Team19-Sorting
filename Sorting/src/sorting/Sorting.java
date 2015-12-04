@@ -119,7 +119,7 @@ public class Sorting extends JFrame {
 		algorithms.add(new QuickSortLomuto());
 		algorithms.add(new QuickSortHoare());
 		algorithms.add(new RadixLSD());
-                //algorithms.add(new RadixMSD());
+        algorithms.add(new RadixMSD());
 		algorithms.add(new ShotGunSort());
 
 		// Run and store the results of the algorithms
