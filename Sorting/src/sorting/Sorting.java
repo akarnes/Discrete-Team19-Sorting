@@ -107,7 +107,8 @@ public class Sorting extends JFrame {
 
 		// Put new algorithms here in the order we want to present them
 		algorithms = new ArrayList<>();
-		algorithms.add(new BubbleSort());
+		algorithms.add(new RadixLSD());
+                algorithms.add(new BubbleSort());
 		algorithms.add(new InsertionSort());
                 algorithms.add(new GnomeSort());
 		algorithms.add(new SelectionSort());
@@ -213,10 +214,10 @@ public class Sorting extends JFrame {
 				dataColor[action.index] = Color.RED;
 				setCnt++;
 			} else if(action.type == DataAccessor.ActionType.GET) {
+                                Sound.play(300 + (int)(1000 * ((double) data[action.index] / (double) DATA_SIZE)));
 				// The algorithm got an element from the data
 				dataColor[action.index] = Color.BLUE;
 				accessCnt++;
-				Sound.play(300 + (int)(1000 * ((double) data[action.index] / (double) DATA_SIZE)));
 			} else if(action.type == DataAccessor.ActionType.DONE) {
 				// The algorithm claims the data has been sorted. Time to check its work
 				isChecking = true;
