@@ -51,7 +51,7 @@ public class Sorting extends JFrame {
                 // Increase the artificial delay
                 if (delay < 1) {
                     delay += .01;
-                    delayMultiple--;
+                    delayMultiple -= 10;
                 } else {
                     delay += 10;
                 }
@@ -62,7 +62,7 @@ public class Sorting extends JFrame {
                     delay -= 10;
                 } else if (delay < 2 && delay > 0.019) {
                     delay -= .01;
-                    delayMultiple++;
+                    delayMultiple += 10;
                 }
             }
             if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -118,7 +118,7 @@ public class Sorting extends JFrame {
         // Put new algorithms here in the order we want to present them
         algorithms = new ArrayList<>();
         algorithms.add(new RadixLSD());
-        //algorithms.add(new BubbleSort());
+        algorithms.add(new BubbleSort());
         algorithms.add(new InsertionSort());
         algorithms.add(new GnomeSort());
         algorithms.add(new SelectionSort());
@@ -130,8 +130,8 @@ public class Sorting extends JFrame {
         algorithms.add(new QuickSortLomuto());
         algorithms.add(new QuickSortHoare());
         algorithms.add(new RadixLSD());
-        //algorithms.add(new RadixMSD());
-        //algorithms.add(new ShotGunSort());
+        algorithms.add(new RadixMSD());
+        algorithms.add(new ShotGunSort());
 
         // Run and store the results of the algorithms
         results = new ArrayList<>(algorithms.size());
@@ -314,7 +314,7 @@ public class Sorting extends JFrame {
         g.drawString("Total Access #: " + results.get(currResult).getAccess(), 200, 65);
         g.drawString("Set #: " + setCnt, 400, 50);
         g.drawString("Total Set #: " + results.get(currResult).getSet(), 400, 65);
-        g.drawString("Delay: " + String.format("%.2f",delay) + "ms", 600, 50);
+        g.drawString("Delay: " + String.format("%.2f", delay) + "ms", 600, 50);
 
         // Flip the buffers. In other words, we've finished the frame and are
         // ready to show it.
